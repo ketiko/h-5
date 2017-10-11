@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @appreciation.user %>
+</p>
+
+<p>
+  <strong>Points:</strong>
+  <%= @appreciation.points %>
+</p>
+
+<p>
+  <strong>Token:</strong>
+  <%= @appreciation.token %>
+</p>
+
+<%= link_to 'Edit', edit_appreciation_path(@appreciation) %> |
+<%= link_to 'Back', appreciations_path %>
