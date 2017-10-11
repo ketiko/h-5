@@ -9,6 +9,7 @@ class Appreciation < ApplicationRecord
 
   def qr_code
     qrcode = RQRCode::QRCode.new(url)
-    qrcode.as_html
+    output = Base64.encode64(qrcode.as_png.to_s)
+    "data:image/png;base64,#{output}"
   end
 end

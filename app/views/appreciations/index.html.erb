@@ -25,7 +25,7 @@
         <td><%= appreciation.token %></td>
         <td><%= appreciation.given %></td>
         <td><%= appreciation.url %></td>
-        <td><%= raw appreciation.qr_code %></td>
+        <td><img src="<%=  appreciation.qr_code %>"></img></td>
         <td><%= link_to 'Show', appreciation %></td>
         <td><%= link_to 'Edit', edit_appreciation_path(appreciation) %></td>
         <td><%= link_to 'Destroy', appreciation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
