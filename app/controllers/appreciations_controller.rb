@@ -1,5 +1,5 @@
 class AppreciationsController < ApplicationController
-  before_action :set_appreciation, only: [:show, :edit, :update, :destroy]
+  before_action :set_appreciation, only: [:give, :show, :edit, :update, :destroy]
 
   # GET /appreciations
   # GET /appreciations.json
@@ -61,14 +61,17 @@ class AppreciationsController < ApplicationController
     end
   end
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_appreciation
-      @appreciation = Appreciation.find(params[:id])
-    end
+  def give
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def appreciation_params
-      params.require(:appreciation).permit(:user_id, :points, :token)
-    end
+  private
+  # Use callbacks to share common setup or constraints between actions.
+  def set_appreciation
+    @appreciation = Appreciation.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def appreciation_params
+    params.require(:appreciation).permit(:user_id, :points, :token)
+  end
 end

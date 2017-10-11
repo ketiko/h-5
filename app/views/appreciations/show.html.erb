@@ -2,7 +2,7 @@
 
 <p>
   <strong>User:</strong>
-  <%= @appreciation.user %>
+  <%= @appreciation.user.email %>
 </p>
 
 <p>
@@ -13,6 +13,16 @@
 <p>
   <strong>Token:</strong>
   <%= @appreciation.token %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @appreciation.url %>
+</p>
+
+<p>
+  <strong>QR Code:</strong>
+  <%= raw @appreciation.qr_code %>
 </p>
 
 <%= link_to 'Edit', edit_appreciation_path(@appreciation) %> |

@@ -5,10 +5,13 @@
 <table>
   <thead>
     <tr>
+      <th>Id</th>
       <th>User</th>
       <th>Points</th>
       <th>Token</th>
       <th>Given</th>
+      <th>URL</th>
+      <th>QR Code</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,10 +19,13 @@
   <tbody>
     <% @appreciations.each do |appreciation| %>
       <tr>
-        <td><%= appreciation.user %></td>
+        <td><%= appreciation.id %></td>
+        <td><%= appreciation.user.email %></td>
         <td><%= appreciation.points %></td>
         <td><%= appreciation.token %></td>
         <td><%= appreciation.given %></td>
+        <td><%= appreciation.url %></td>
+        <td><%= raw appreciation.qr_code %></td>
         <td><%= link_to 'Show', appreciation %></td>
         <td><%= link_to 'Edit', edit_appreciation_path(appreciation) %></td>
         <td><%= link_to 'Destroy', appreciation, method: :delete, data: { confirm: 'Are you sure?' } %></td>

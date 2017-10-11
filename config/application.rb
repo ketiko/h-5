@@ -15,5 +15,6 @@ module Iztarg
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
     config.active_record.primary_key = :uuid
+    config.action_controller.default_url_options = { host: 'localhost' }
   end
 end
