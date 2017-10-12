@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :bank_accounts
   resources :appreciations do
     member do
       get :give
