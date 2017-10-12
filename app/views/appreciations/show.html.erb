@@ -16,8 +16,13 @@
 </p>
 
 <p>
+  <strong>Given:</strong>
+  <%= @appreciation.given %>
+</p>
+
+<p>
   <strong>Url:</strong>
-  <%= @appreciation.url %>
+  <%= link_to give_appreciation_url(@appreciation), @appreciation.url %>
 </p>
 
 <p>

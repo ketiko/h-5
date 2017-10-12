@@ -12,4 +12,13 @@ class Appreciation < ApplicationRecord
     output = Base64.encode64(qrcode.as_png.to_s)
     "data:image/png;base64,#{output}"
   end
+
+  def give
+    if given != true
+      update(given: true)
+    else
+      errors.add(:given, 'This appreciation has already be used')
+      false
+    end
+  end
 end
