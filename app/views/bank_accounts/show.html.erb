@@ -5,5 +5,10 @@
   <%= @bank_account.user.email %>
 </p>
 
+<p>
+  <strong>Total:</strong>
+  <%= @bank_account.total %>
+</p>
+
 <%= link_to 'Edit', edit_bank_account_path(@bank_account) %> |
 <%= link_to 'Back', bank_accounts_path %>

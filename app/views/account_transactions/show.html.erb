@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Bank account:</strong>
+  <%= @account_transaction.bank_account %>
+</p>
+
+<p>
+  <strong>Points:</strong>
+  <%= @account_transaction.points %>
+</p>
+
+<%= link_to 'Edit', edit_account_transaction_path(@account_transaction) %> |
+<%= link_to 'Back', account_transactions_path %>

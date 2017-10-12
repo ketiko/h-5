@@ -3,6 +3,8 @@ class Appreciation < ApplicationRecord
   belongs_to :user
   has_secure_token
 
+  validates :user, presence: true
+
   def url
     give_appreciation_path(self)
   end
@@ -15,7 +17,10 @@ class Appreciation < ApplicationRecord
 
   def give
     if given != true
-      update(given: true)
+      transaction do
+        update(given: true)
+        AccountTransaction.create!(bank_account_id: user.bank_account.id, appreciation_id: self.id, points: points)
+      end
     else
       errors.add(:given, 'This appreciation has already be used')
       false
