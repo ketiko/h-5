@@ -6,7 +6,7 @@ class Appreciation < ApplicationRecord
   validates :user, presence: true
 
   def url
-    give_appreciation_path(self)
+    give_appreciation_url(self)
   end
 
   def qr_code
