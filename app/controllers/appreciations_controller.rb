@@ -1,5 +1,5 @@
 class AppreciationsController < ApplicationController
-  before_action :set_appreciation, only: [:give, :show, :edit, :update, :destroy]
+  before_action :set_appreciation, only: [:survey, :show, :edit, :update, :destroy]
 
   # GET /appreciations
   # GET /appreciations.json
@@ -61,7 +61,7 @@ class AppreciationsController < ApplicationController
     end
   end
 
-  def give
+  def survey
     respond_to do |format|
       if @appreciation.give
         format.html { redirect_to @appreciation, notice: 'Appreciation was given.' }
