@@ -22,12 +22,12 @@
 
 <p>
   <strong>Url:</strong>
-  <%= link_to give_appreciation_url(@appreciation), @appreciation.url %>
+  <%= link_to give_appreciation_url(@appreciation.token), @appreciation.url %>
 </p>
 
 <p>
   <strong>QR Code:</strong>
-  <%= raw @appreciation.qr_code %>
+  <img src="<%= @appreciation.qr_code %>"></img>
 </p>
 
 <%= link_to 'Edit', edit_appreciation_path(@appreciation) %> |

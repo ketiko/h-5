@@ -24,7 +24,7 @@
         <td><%= appreciation.points %></td>
         <td><%= appreciation.token %></td>
         <td><%= appreciation.given %></td>
-        <td><%= link_to give_appreciation_url(appreciation), appreciation.url %></td>
+        <td><%= link_to give_appreciation_url(appreciation.token), appreciation.url %></td>
         <td><img src="<%=  appreciation.qr_code %>"></img></td>
         <td><%= link_to 'Show', appreciation %></td>
         <td><%= link_to 'Edit', edit_appreciation_path(appreciation) %></td>

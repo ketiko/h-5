@@ -6,7 +6,7 @@ class Appreciation < ApplicationRecord
   validates :user, presence: true
 
   def url
-    give_appreciation_url(self, host: ENV.fetch("DEFAULT_URL_HOST", "localhost:3000"))
+    give_appreciation_url(self.token, host: ENV.fetch("DEFAULT_URL_HOST", "localhost:3000"))
   end
 
   def qr_code()
