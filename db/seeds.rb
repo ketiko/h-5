@@ -5,3 +5,19 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+User.destroy_all
+
+steve_p = User.create!(first_name: 'Steve', last_name: 'Peterson', email: 'steve.peterson@octanner.com')
+steve_f = User.create!(first_name: 'Steve', last_name: 'Fairbanks', email: 'steve.fairbanks@octanner.com')
+
+steve_p.appreciations.create!(points: 10)
+steve_p.appreciations.create!(points: 10)
+steve_p.appreciations.create!(points: 10)
+steve_p.appreciations.create!(points: 10)
+steve_p.appreciations.create!(points: 10)
+
+steve_f.appreciations.create!(points: 10)
+steve_f.appreciations.create!(points: 10)
+steve_f.appreciations.create!(points: 10)
+steve_f.appreciations.create!(points: 10)
+steve_f.appreciations.create!(points: 10)

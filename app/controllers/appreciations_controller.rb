@@ -63,15 +63,7 @@ class AppreciationsController < ApplicationController
   end
 
   def give
-    respond_to do |format|
-      if @appreciation.give
-        format.html { redirect_to @appreciation, notice: 'Appreciation was given.' }
-        format.json { render :show, status: :ok, location: @appreciation }
-      else
-        format.html { redirect_to @appreciation, notice: 'Appreciation has already been given.' }
-        format.json { render json: @appreciation.errors, status: :unprocessable_entity }
-      end
-    end
+    @appreciation.give
   end
 
   private
