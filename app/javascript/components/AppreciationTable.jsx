@@ -38,14 +38,6 @@ const AppreciationTable = ({ appreciations }) => [
             </TableCell>
             <TableCell>
               <a href={`/appreciations/${appreciation.id}`}>Show</a>
-              <a href={`/appreciations/${appreciation.id}/edit`}>Edit</a>
-              <a
-                href={`/appreciations/${appreciation.id}`}
-                data-confirm="Are you sure?"
-                data-method="delete"
-              >
-                Delete
-              </a>
             </TableCell>
           </TableRow>
         )}

@@ -1,12 +1,10 @@
 Rails.application.routes.draw do
-  resources :account_transactions
-  resources :bank_accounts
-  resources :appreciations do
+  resources :bank_accounts, only: [:index, :show]
+  resources :appreciations, only: [:index, :show] do
     member do
       get :give
     end
   end
-  resources :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
