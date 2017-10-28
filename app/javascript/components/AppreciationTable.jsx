@@ -21,7 +21,6 @@ const AppreciationTable = ({ appreciations }) => [
           <TableCell>Given</TableCell>
           <TableCell>URL</TableCell>
           <TableCell>QR Code</TableCell>
-          <TableCell>Actions</TableCell>
         </TableRow>
       </TableHead>
       <TableBody>
@@ -35,9 +34,6 @@ const AppreciationTable = ({ appreciations }) => [
             <TableCell>{getGiveURL(appreciation.token)}</TableCell>
             <TableCell>
               <img src={qrcode.toDataURL(getGiveURL(appreciation.token), 4)} />
-            </TableCell>
-            <TableCell>
-              <a href={`/appreciations/${appreciation.id}`}>Show</a>
             </TableCell>
           </TableRow>
         )}
