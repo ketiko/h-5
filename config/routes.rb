@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :bank_accounts, only: [:index, :show]
+  resources :bank_accounts, only: [:index]
   resources :appreciations, only: [:index, :show] do
     member do
       get :give
