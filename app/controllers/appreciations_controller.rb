@@ -23,7 +23,7 @@ class AppreciationsController < ApplicationController
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_appreciation
-    @appreciation = Appreciation.find(params[:id]).
+    @appreciation = Appreciation.find(params[:id])
   end
 
   # Use callbacks to share common setup or constraints between actions.
