@@ -10,7 +10,7 @@ const AppreciateCard = ({ appreciation }) => (
     <div className="appreciate-card__container">
       <div className="appreciate-card__thanks-container">
         <div className="appreciate-card__border">
-          <img src="/assets/steve.png" className="appreciate-card__avatar" />
+          <img src="/images/steve.png" className="appreciate-card__avatar" />
           <div style={{ textAlign: "center" }}>
             <div className="appreciate-card__name">Steve P.</div>
             <div className="appreciate-card__position">
@@ -24,7 +24,7 @@ const AppreciateCard = ({ appreciation }) => (
             Want to appreicate Steve’s hard work? Use your phone to scan the QR
             code to give him a quick appreciation.
           </div>
-          <img src="/assets/hilton.png" style={{ width: '60px', height: '40px' }} />
+          <img src="/images/hilton.png" style={{ width: '60px', height: '40px' }} />
         </div>
       </div>
       <div className="appreciate-card__qr">
