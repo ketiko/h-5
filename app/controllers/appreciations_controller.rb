@@ -5,26 +5,25 @@ class AppreciationsController < ApplicationController
   # GET /appreciations
   # GET /appreciations.json
   def index
-    appreciations = Appreciation.includes(:user).all
-
-    @appreciations = appreciations.map do |appreciation|
-      AppreciationPresenter.new(appreciation)
-    end
+    @appreciations = Appreciation.all
+    @appreciations_json = Appreciation.all.to_json(include: :user)
   end
 
   # GET /appreciations/1
   # GET /appreciations/1.json
   def show
+    @appreciation_json = @appreciation.to_json(include: :user)
   end
 
   def give
     @appreciation.give
+    @appreciation_json = @appreciation.to_json(include: :user)
   end
 
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_appreciation
-    @appreciation = Appreciation.find(params[:id])
+    @appreciation = Appreciation.find(params[:id]).
   end
 
   # Use callbacks to share common setup or constraints between actions.
