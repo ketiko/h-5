@@ -1,0 +1,76 @@
+@media screen {
+  html {
+    font-size: 10px;
+  }
+}
+
+@media print {
+  html {
+    font-size: 6.5px;
+  }
+  .appreciate-card__wrapper:nth-child(2n) {
+    page-break-after: always;
+  }
+}
+
+.appreciate-card__wrapper {
+  display: flex;
+  justify-content: center;
+  -webkit-print-color-adjust: exact;
+}
+.appreciate-card__container {
+  border: 1px dashed #efefef;
+  color: #ffffff;
+  display: flex;
+  width: 100rem;
+  margin: 1.5rem;
+  padding: 3rem;
+}
+.appreciate-card__thanks-container {
+  display: flex;
+  padding: 2.6rem;
+  background-color: #003151;
+  width: 54rem;
+  height: 54rem;
+}
+.appreciate-card__border {
+  border: 0.2rem solid #ffffff;
+  flex-grow: 1;
+  padding: 4.2rem 7.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.appreciate-card__avatar {
+  border-radius: 50%;
+  width: 12rem;
+  height: 12rem;
+}
+.appreciate-card__name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.appreciate-card__position {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+.appreciate-card__title {
+  font-size: 4rem;
+  font-weight: bold;
+}
+.appreciate-card__rule {
+  border: 0.1rem solid #ffffff;
+  width: 9rem;
+}
+.appreciate-card__description {
+  font-size: 1.6rem;
+  text-align: center;
+}
+.appreciate-card__qr {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  margin-left: 3rem;
+  align-items: center;
+}
