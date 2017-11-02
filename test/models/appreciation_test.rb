@@ -9,6 +9,9 @@
 #  given      :boolean          default(FALSE)
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  comments   :text
+#  giver_name :string
+#  likes      :integer
 #
 # Indexes
 #
