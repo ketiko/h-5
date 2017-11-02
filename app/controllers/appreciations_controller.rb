@@ -5,7 +5,11 @@ class AppreciationsController < ApplicationController
   # GET /appreciations
   # GET /appreciations.json
   def index
-    @appreciations = Appreciation.all
+    appreciations = Appreciation.includes(:user).all
+
+    @appreciations = appreciations.map do |appreciation|
+      AppreciationPresenter.new(appreciation)
+    end
   end
 
   # GET /appreciations/1
