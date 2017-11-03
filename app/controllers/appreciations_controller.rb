@@ -1,6 +1,6 @@
 class AppreciationsController < ApplicationController
-  before_action :set_appreciation, only: [:show, :edit, :update, :destroy]
-  before_action :set_give_appreciation, only: [:give]
+  before_action :set_appreciation, only: [:show, :edit, :destroy]
+  before_action :set_give_appreciation, only: [:give, :update]
 
   # GET /appreciations
   # GET /appreciations.json

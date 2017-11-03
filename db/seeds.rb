@@ -7,17 +7,13 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all
 
-steve_p = User.create!(first_name: 'Steve', last_name: 'Peterson', email: 'steve.peterson@octanner.com')
+steve_p = User.create!(first_name: 'Steve', last_name: 'Peterson', email: 'steve.peterson@octanner.com', avatar_url: '/images/steve.png')
 steve_f = User.create!(first_name: 'Steve', last_name: 'Fairbanks', email: 'steve.fairbanks@octanner.com')
 
-steve_p.appreciations.create!(points: 10)
-steve_p.appreciations.create!(points: 10)
-steve_p.appreciations.create!(points: 10)
-steve_p.appreciations.create!(points: 10)
-steve_p.appreciations.create!(points: 10)
+10.times do
+  steve_p.appreciations.create!(points: 10)
+end
 
-steve_f.appreciations.create!(points: 10)
-steve_f.appreciations.create!(points: 10)
-steve_f.appreciations.create!(points: 10)
-steve_f.appreciations.create!(points: 10)
-steve_f.appreciations.create!(points: 10)
+10.times do
+  steve_f.appreciations.create!(points: 10)
+end
