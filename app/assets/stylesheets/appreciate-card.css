@@ -22,6 +22,7 @@
   border: 1px dashed #efefef;
   color: #ffffff;
   display: flex;
+  flex-wrap: wrap;
   width: 100rem;
   margin: 1.5rem;
   padding: 3rem;
@@ -74,4 +75,10 @@
   justify-content: center;
   margin-left: 3rem;
   align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 6px;
+  }
 }

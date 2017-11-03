@@ -29,3 +29,9 @@
   color: #ffffff;
   background-color: #00A8E1;
 }
+
+.thumbs-up__level {
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 10px;
+}
