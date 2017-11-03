@@ -16,11 +16,11 @@ class AppreciationsController < ApplicationController
   end
 
   def give
-    @appreciation.give
     @appreciation_json = @appreciation.to_json(include: :user)
   end
 
   def update
+    @appreciation.give
     @appreciation.update(update_params)
     redirect_to give_appreciation_path(@appreciation.token)
   end
