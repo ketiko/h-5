@@ -22,7 +22,7 @@ const AppreciateCard = ({ appreciation }) => (
           <hr className="appreciate-card__rule" />
           <div className="appreciate-card__description">
             {getName(appreciation.user)} assisted you during your stay at the Salt Lake City Hilton.
-            Want to appreicate Steve’s hard work? Use your phone to scan the QR
+            Want to appreciate {appreciation.user.first_name}’s hard work? Use your phone to scan the QR
             code to give him a quick appreciation.
           </div>
           <img src="/images/hilton.png" style={{ width: '60px', height: '40px' }} />
