@@ -22,7 +22,7 @@
 
 class AccountTransaction < ApplicationRecord
   belongs_to :bank_account
-  has_one :appreciation
+  belongs_to :appreciation
 
   def self.total
     sum(:points)
