@@ -1,0 +1,31 @@
+.thumbs-up__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 444px;
+  padding: 22px 30px;
+  background-color: #F9F7FA;
+}
+
+.thumbs-up__thumb-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.thumbs-up__thumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  margin: 5px;
+  border: 1px solid #DADCDD;
+  background-color: #F9F7FA;
+  cursor: pointer;
+}
+
+.thumbs-up__thumb--active {
+  color: #ffffff;
+  background-color: #00A8E1;
+}

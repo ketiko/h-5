@@ -13,3 +13,20 @@
  *= require_tree .
  *= require_self
  */
+
+@font-face {
+  font-family: Gotham;
+  src: url(/fonts/Gotham-Bold.otf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: ProximaNova;
+  src: url(/fonts/ProximaNova-Reg.otf);
+}
+
+@font-face {
+  font-family: ProximaNova;
+  src: url(/fonts/ProximaNova-RegIt.otf);
+  font-style: italic;
+}
