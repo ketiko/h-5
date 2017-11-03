@@ -1,7 +1,7 @@
 import React from "react";
 
 import Card from "material-ui/Card";
-import AuthenticityToken from './AuthenticityToken';
+import AuthenticityToken from "./AuthenticityToken";
 import ThumbsUp from "./ThumbsUp";
 
 import { getName } from "../utils";
@@ -19,7 +19,8 @@ const AppreciateForm = ({ appreciation, token }) => (
           src={appreciation.user.avatar_url}
         />
         <div className="appreciate-form__thanks">
-          Say Thanks to {getName(appreciation.user)}
+          {!appreciation.given && `Say Thanks to ${getName(appreciation.user)}`}
+          {appreciation.given && `${getName(appreciation.user)} has been Thanked`}
         </div>
         <div className="appreciate-form__position">
           Housekeeper at Hilton Salt Lake City
@@ -30,31 +31,37 @@ const AppreciateForm = ({ appreciation, token }) => (
           <div className="appreciate-form__label">
             How many thumbs up do you give {appreciation.user.first_name}?
           </div>
-          <ThumbsUp />
+          <ThumbsUp defaultValue={appreciation.likes} />
           <div className="appreciate-form__label">Leave a comment:</div>
           <textarea
+            defaultValue={appreciation.comments}
             className="appreciate-form__input"
             name="comments"
             rows={10}
             style={{ width: "calc(100% - 18px)" }}
+            disabled={appreciation.given}
           />
           <div
             className="appreciate-form__label"
-            style={{ display: "flex", alignItems: "center", flexWrap: 'wrap' }}
+            style={{ display: "flex", alignItems: "center", flexWrap: "wrap" }}
           >
-            Include Your Name:
+            {appreciation.given ? "Thanked by:" : "Include Your Name:"}
             <input
+              defaultValue={appreciation.giver_name}
               className="appreciate-form__input"
               style={{ marginLeft: 10 }}
               type="text"
               name="giver_name"
+              disabled={appreciation.given}
             />
           </div>
-          <div className="appreciate-form__actions">
-            <button className="appreciate-form__button" type="submit">
-              Submit
-            </button>
-          </div>
+          {!appreciation.given && (
+            <div className="appreciate-form__actions">
+              <button className="appreciate-form__button" type="submit">
+                Submit
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </Card>

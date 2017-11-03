@@ -8,9 +8,13 @@ const keys = {
 };
 
 class ThumbsUp extends React.Component {
-  state = {
-    level: 1
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      level: props.defaultValue || 1,
+    };
+  }
 
   getLevelText = () => {
     switch (this.state.level) {

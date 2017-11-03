@@ -68,6 +68,10 @@
   flex-grow: 1;
 }
 
+.appreciate-form__input:disabled {
+  background-color: #fefefe;
+}
+
 .appreciate-form__actions {
   text-align: right;
   margin: 24px 0;
