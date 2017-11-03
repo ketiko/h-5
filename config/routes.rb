@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :appreciations, only: [:index] do
     member do
       get :give
+      post :give, to: 'appreciations#update'
     end
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

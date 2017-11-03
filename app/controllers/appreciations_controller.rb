@@ -6,7 +6,7 @@ class AppreciationsController < ApplicationController
   # GET /appreciations.json
   def index
     @appreciations = Appreciation.all
-    @appreciations_json = Appreciation.all.to_json(include: :user)
+    @appreciations_json = @appreciations.to_json(include: :user)
   end
 
   # GET /appreciations/1
@@ -20,7 +20,13 @@ class AppreciationsController < ApplicationController
     @appreciation_json = @appreciation.to_json(include: :user)
   end
 
+  def update
+    @appreciation.update(update_params)
+    redirect_to give_appreciation_path(@appreciation.token)
+  end
+
   private
+
   # Use callbacks to share common setup or constraints between actions.
   def set_appreciation
     @appreciation = Appreciation.find(params[:id])
@@ -29,5 +35,9 @@ class AppreciationsController < ApplicationController
   # Use callbacks to share common setup or constraints between actions.
   def set_give_appreciation
     @appreciation = Appreciation.find_by(token: params[:id])
+  end
+
+  def update_params
+    params.permit(:comments, :giver_name, :likes)
   end
 end
