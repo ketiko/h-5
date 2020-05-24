@@ -14,7 +14,7 @@
     "react_ujs": "^2.3.1"
   },
   "devDependencies": {
-    "eslint": "^4.9.0",
+    "eslint": "^4.18.2",
     "webpack-dev-server": "^3.1.14"
   }
 }
